@@ -81,7 +81,6 @@ PC = []
 
 for i in range(len(df)):    
     PC.append(df['PA'].loc[i][-7:])
-    #PR.append(df)
             
 df['PC'] = PC # New Row for postal code
 
