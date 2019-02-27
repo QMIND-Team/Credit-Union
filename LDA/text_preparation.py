@@ -11,8 +11,6 @@ from spacy.lang.en import English
 from nltk.corpus import wordnet as wn
 from nltk.stem.wordnet import WordNetLemmatizer
 
-
-
 parser = English()
 
 nltk.download('stopwords')
