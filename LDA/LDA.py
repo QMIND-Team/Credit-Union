@@ -13,9 +13,6 @@ import pickle
 #import pyLDAvis.gensim
 #import pyLDAvis
 
-# holds all of the tokenized word data
-text_data = []
-
 # Getting the path to all of the training articles
 corpus_path = 'corpus/'
 article_paths = [os.path.join(corpus_path,p) for p in os.listdir(corpus_path)]
@@ -35,9 +32,9 @@ for path in article_paths:
             corpus.append(tokens)
 
 
-TOPICS = 5
-PASSES = 50
-ITERATIONS = 1000
+TOPICS = 4
+PASSES = 15
+ITERATIONS = 50
 
 # Creating term dictionary of corpus. Each unique term is assigned an index
 dictionary = corpora.Dictionary(corpus)
