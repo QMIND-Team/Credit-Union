@@ -8,7 +8,6 @@ import os
 import text_preparation as tp
 from gensim import corpora
 from gensim.models.ldamodel import LdaModel as lda
-import pyLDAvis.gensim
 import pickle
 
 #import pyLDAvis.gensim
@@ -38,7 +37,7 @@ for path in article_paths:
 
 TOPICS = 5
 PASSES = 50
-ITERATIONS = 150
+ITERATIONS = 1000
 
 # Creating term dictionary of corpus. Each unique term is assigned an index
 dictionary = corpora.Dictionary(corpus)
