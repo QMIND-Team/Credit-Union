@@ -7,8 +7,11 @@ Created on Thu Feb 28 11:02:20 2019
 import gensim
 import pickle
 import numpy as np
+from scipy.stats import entropy
 
+TOPICS = 4
 
+#%% Cosine Similarity Analysis
 # reload dictionary, corpus, and lda model
 dictionary = gensim.corpora.Dictionary.load('dictionary.gensim')
 corpus = pickle.load(open('corpus.pkl','rb'))
@@ -37,8 +40,55 @@ for i in range(len(sim_matrix)):
     temp = sorted(temp, key =lambda x: x[0], reverse = True)
     
     # Extract top N
-    temp = temp[:NUM]
+    #temp = temp[:NUM]
     
     top.append(temp)
+  
+#%% KLD analysis
+# Generate prob distributions
+distributions = [lda[corpus[i]] for i in range(len(corpus))]
+zero_v = 0.00001
+
+# added missing topics to the distributions
+for j in range(len(distributions)):
+    topics = []
+    for topic in distributions[j]:
+        topics.append(topic[0])
     
+    # added zero vectors
+    for i in range(TOPICS):
+        if i not in topics:
+            distributions[j].append((i,zero_v))
     
+    # sorted by topic identifier     
+    distributions[j] = sorted(distributions[j], key = lambda x: x[0])
+    
+    # Prepared for KLD analysis
+    for k in range(TOPICS):
+        distributions[j][k] = distributions[j][k][1]
+    
+
+# Intialize KLD array
+KLDiv = np.zeros([len(distributions),len(distributions)])   
+ 
+# Calculate KLD for each CU against each other
+for i in range(len(KLDiv)):
+    for j in range(len(KLDiv)):
+        KLDiv[i,j] = entropy(distributions[i],distributions[j])
+
+# Find 5 most similar CUs to each CU    
+KLD_top = []
+
+for i in range(len(KLDiv)):
+    temp = []
+    for j in range(len(KLDiv)):
+        if j != i:
+            temp.append((KLDiv[i,j],j))
+            
+    # Sort the list by its similarity metric
+    temp = sorted(temp, key =lambda x: x[0], reverse = False)
+    
+    # Extract top N
+    #temp = temp[:NUM]
+    
+    KLD_top.append(temp)

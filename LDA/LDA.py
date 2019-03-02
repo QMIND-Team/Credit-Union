@@ -39,7 +39,6 @@ ITERATIONS = 50
 # Creating term dictionary of corpus. Each unique term is assigned an index
 dictionary = corpora.Dictionary(corpus)
 
-
 # Filter terms which appear in fewer than 4 and more than 40%
 dictionary.filter_extremes(no_below=4, no_above=0.4)
 dictionary.save('dictionary.gensim')
@@ -55,7 +54,7 @@ ldamodel = lda(vectorized_corpus, num_topics=TOPICS, id2word = dictionary, passe
 ldamodel.save('model.gensim')
 
 # printing the 5 found topics and the five most associated words with that topic
-for i,topic in enumerate(ldamodel.print_topics(num_topics = TOPICS, num_words = 10)):
+for i,topic in enumerate(ldamodel.print_topics(num_topics = TOPICS, num_words = 5)):
     words = topic[1].split('+')
     print(words,'\n')
 
