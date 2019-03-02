@@ -29,6 +29,4 @@ headers = y.pop(0)
 data = pd.DataFrame(y, columns = headers)
 
 #pickles dataframe
-pickle_out = open("inst_num.pickle", "wb")
-pickle.dump(data, pickle_out)
-pickle_out.close
+data.to_pickle("inst_num.pickle")
