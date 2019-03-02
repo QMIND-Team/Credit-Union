@@ -34,7 +34,7 @@ app.layout = html.Div(children=[
                    style={'color' : colors['text'], 
                           'fontSize' : 15, 'textAlign' : 'center'}),
             # Author 
-            html.P('Developed by: Caelum W. Kamps', 
+            html.P('Developed by: QMIND Credit Union Analysis Team', 
                    style={'color' : colors['text'], 'textAlign' : 'center',
                           'marginBottom' : 0}),
             # Line break

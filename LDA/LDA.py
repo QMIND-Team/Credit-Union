@@ -24,13 +24,15 @@ corpus =[]
 for path in article_paths:
     with open(path) as f:
         doc = ''
-        for line in f:
-            doc = doc + ' ' + line  
-        #Clean the text and extract the token words
-        tokens = tp.prepare_text_for_lda(doc)
-        if len(tokens) > 0:
-            corpus.append(tokens)
-
+        try:
+            for line in f:
+                doc = doc + ' ' + line  
+            #Clean the text and extract the token words
+            tokens = tp.prepare_text_for_lda(doc)
+            if len(tokens) > 0:
+                corpus.append(tokens)
+        except:
+            next
 
 TOPICS = 4
 PASSES = 15
