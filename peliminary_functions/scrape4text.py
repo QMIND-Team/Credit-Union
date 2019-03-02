@@ -10,7 +10,8 @@ import pandas as pd
 import re
 import time
 
-df = pd.read_csv("Completed_URLS.csv").iloc[:25]
+df = pd.read_csv("alis_scraped_urls.csv")
+df.dropna(inplace = True)
 df.columns = ["CU","LOC","URL"]
 
 def fix(string):
@@ -29,10 +30,14 @@ for x in range(len(df)):
   f.skip_internal_links = True
   try:
     r = requests.get(url)
+    r.raise_for_status()
   except:
     time.sleep(5)
+  try:
     r = requests.get(url)
-  r.raise_for_status()
+    r.raise_for_status()
+  except:
+    next
   
   soup = bs(r.content, "lxml").prettify()
 
@@ -40,7 +45,7 @@ for x in range(len(df)):
   rendered_content = re.sub(r'{{.+?}}', '', rendered_content)
   rendered_content = rendered_content.replace("*", "").replace("#", "").replace("_", "").replace("\n\n\n\n", "\n").replace("\n\n\n", "\n\n")
                              
-  file_name = df["CU"][x] + ".txt"
+  file_name = 'corpus2/' + df["CU"][x] + ".txt"
   f = open(file_name, "w", encoding="utf-8")
   f.write(rendered_content)
   f.close()
