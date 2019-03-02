@@ -10,7 +10,8 @@ import pandas as pd
 import re
 import time
 
-df = pd.read_csv("alis_scraped_urls.csv").iloc[:25]
+df = pd.read_csv("alis_scraped_urls.csv")
+df.dropna(inplace = True)
 df.columns = ["CU","LOC","URL"]
 
 def fix(string):
