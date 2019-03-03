@@ -3,7 +3,7 @@
 
 -Pulls all Geographic ID's (guids) from every single 2016 Census subdivision, in every province/territory of of Canada.
 -Places the data into a CSV file
--Trims the CSV file from 5162 rows -> 3663 rows due to suppressed data (Held as confidential from Statistics Data)
+-Trims the CSV file from 5162 rows -> 3392 rows due to suppressed data (Held as confidential from Statistics Data)
     -If a data quality flag contains a '9', it means either income data and demographic data, be it long-form and
     short-form, is populated with an 'x' rather than a real value.
 -More information on the URL's parameters can be found here: https://www12.statcan.gc.ca/wds-sdw/cr2016geo-eng.cfm
@@ -32,7 +32,11 @@ def requestResponse(url):
 def guid_trim(filename):
     unwanted_flags = {9, 19, 29, 109, 909, 919, 929, 939, 949, 999, 1009, 1019, 1129, 1909, 1919, 1929, 1939, 1999,
                       2909, 2919, 2929, 2939, 3929, 3939, 4333, 4909, 4929, 4939, 4949, 4959, 4999, 5343, 5353, 5909,
-                      5919, 5939, 5949, 5959, 5999, 9999, 19999}
+                      5919, 5939, 5949, 5959, 5999, 9999, 19999,
+                      21, 200, 201, 202, 1122, 1212,  2233, 2313, 2323, 3323,
+                      2100, 1112, 2212, 212, 1211, 2200, 22, 122, 1222, 123, 12, 112, 4323, 2223,
+                      1233, 2311, 2312, 1201, 2222, 23, 2213, 1323,
+                      3100, 1313, 3333, 33, 3311, 1311, 303,}
     df = pd.read_csv(filename, encoding="ISO-8859-1")  # Import the raw data
     df.columns = ['GUID', 'PN', 'SDN', 'GT', 'GSF', 'GLF', 'DQF']  # Label the columns
     for flag in unwanted_flags:

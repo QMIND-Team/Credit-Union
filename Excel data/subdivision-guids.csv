@@ -1,4 +1,4 @@
-GEO_UID,Province_Name,Subdivision_Name,Geographic_Type,GNR_SF,GNR_LF,data_quality_flag
+GEO_UID,Province_Name,Subdivision_Name,Geographic_Type,GNR_SF,GNR_LF,Data_Quality_Flag
 2016A00051001101,Newfoundland and Labrador,"Division No.  1, Subd. V",Subdivision of unorganized,10.1,5.2,09999
 2016A00051001105,Newfoundland and Labrador,Portugal Cove South,Town,1.7,4.0,00909
 2016A00051001113,Newfoundland and Labrador,Trepassey,Town,4.5,5.3,00000

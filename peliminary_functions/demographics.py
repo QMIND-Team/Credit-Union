@@ -13,6 +13,8 @@ Visit these links to find out more about what data is being pulled:
 import urllib.request
 import urllib.parse
 import json
+import pickle
+import numpy as np
 import itertools
 import requests
 import pandas as pd
@@ -20,7 +22,7 @@ import csv
 
 # Outputs to text file
 def text_output(str):
-    text_file = open("out.txt", "w")
+    text_file = open("out-demographics.txt", "w")
     text_file.write(str)
     text_file.close()
 
@@ -42,7 +44,8 @@ gnr_lf_list = []
 data_quality_flag_list = []
 
 # adding stuff to good ol lists
-with open('subdivision-guids.csv') as csvfile:
+with open('guids-ontario.csv') as csvfile:
+#with open('subdivision-guids-final.csv') as csvfile:
     readCSV = csv.reader(csvfile, delimiter=',')
     for row in readCSV:
         dguid_list.append(row[0])
@@ -54,31 +57,23 @@ prov_name = prov_name[1:]
 subdiv_name = subdiv_name[1:]
 subdiv_type_list = subdiv_type_list[1:]
 
-#writing demographics to a csv
-with open('demographics-table-test.csv', 'w', newline='') as writeCsvFile:
-    data_writer = csv.writer(writeCsvFile)
-    # The column names found in data
-    data_writer.writerow(("GEO_UID" , "Province_Name", "Subdivision_Name", "Geographic_Type", "Prov_Terr_ID",
-                          "Province_Terr_Name", "GEO_UID", "GEO_ID", "GEO_NAME", "GEO_TYPE",
-                          "TOPIC_THEME", "TEXT_ID", "HIER_ID", "INDENT_ID", "TEXT_NAME",
-                          "NOTE_ID", "NOTE", "T_DATA", "T_SYM", "M_DATA",
-                          "F_DATA",))
 
-    loop_count = 1
-    for (a,b,c,d) in zip(dguid_list, prov_name, subdiv_name, subdiv_type_list):
-        #print(a, b, c, d)
-        dguid = a
-        print(a,b,c,d)
-        url_test = 'https://www12.statcan.gc.ca/rest/census-recensement/CPR2016.json?lang=E&dguid=' + dguid + '&topic=0&notes=0'
-        text_output(requestResponse(url_test))
-        with open('out.txt') as jsonfile:
-            data = json.load(jsonfile)
+#writing columns and column contents to a dataframe
+ddf_columns = ['GUID', 'PROVID', 'PROVNAME', 'SDNAME', 'GEOTYPE', 'TEXTTHEME', 'TEXTID',
+                           'HIER', 'INDENT', 'TEXTNAME', 'TEXTDATA', 'MDATA', 'FDATA'] # Label the columns
+demographics_df = pd.DataFrame(columns= ddf_columns)
 
+for (a, b, c, d) in zip(dguid_list, prov_name, subdiv_name, subdiv_type_list):
+    dguid = a
+    url = 'https://www12.statcan.gc.ca/rest/census-recensement/CPR2016.json?lang=E&dguid=' + dguid + '&topic=7&notes=0' # receives income data from subdivisions in Ontario
+    text_output(requestResponse(url))
+    with open('out-demographics.txt') as jsonfile:
+        data = json.load(jsonfile)
         for i in range(len(data['DATA'])):
-            data_writer.writerow((a, b, c, d, data['DATA'][i][0],
-                                data['DATA'][i][1], data['DATA'][i][2], data['DATA'][i][3], data['DATA'][i][4], data['DATA'][i][5],
-                                data['DATA'][i][6], data['DATA'][i][7], data['DATA'][i][8], data['DATA'][i][9], data['DATA'][i][10],
-                                data['DATA'][i][11], data['DATA'][i][12], data['DATA'][i][13], data['DATA'][i][14], data['DATA'][i][15],
-                                data['DATA'][i][17]))
-    loop_count += 1
-print('done writing to csv.')
+            demographics_df.loc[-1] = [a, data['DATA'][i][0], b, c,
+                                       d, data['DATA'][i][6], data['DATA'][i][7], data['DATA'][i][8],
+                                       data['DATA'][i][9], data['DATA'][i][10], data['DATA'][i][13],
+                                       data['DATA'][i][15],
+                                       data['DATA'][i][17]]
+            demographics_df.index = demographics_df.index + 1
+demographics_df.to_pickle("./demographics-data.pkl")
