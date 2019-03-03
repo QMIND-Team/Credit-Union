@@ -41,9 +41,9 @@
      Bill Payments 
      Cheques & Drafts 
      Currency Exchange 
-     Deposit Anywhere™ 
+     Deposit Anywhere 
      Direct Deposit 
-     Lock'N'Block™ 
+     Lock'N'Block 
      Overdraft Protection 
      Safety Deposit Boxes 
      Transfers 
@@ -218,7 +218,7 @@ Corporation of Manitoba
    facebook 
    twitter 
 
-© Sat Mar 02 11:54:51 PST 2019 Stride Credit Union.  All rights reserved.
+© Sat Mar 02 19:26:46 PST 2019 Stride Credit Union.  All rights reserved.
 
   
 

@@ -53,7 +53,7 @@ from the bank. Credit Unions were a relatively new financial institution whose
 growing popularity in the region was borne out of the global economic collapse
 of 1929 and the subsequent Great Depression of the 1930s. With 14 original
 members and no office, SASCU was incorporated on April 29, 1946. The following
-month, the first transaction in our credit union’s history was made on May 28,
+month, the first transaction in our credit unions history was made on May 28,
 with a deposit of $41.50. SASCU has come a long way since the end of 1946,
 when it had grown to 33 members and $205 in assets.
 
@@ -114,7 +114,7 @@ Join SASCU Today
    instagram 
    linkedin 
 
-© Sat Mar 02 11:55:30 PST 2019 Salmon Arm Savings and Credit Union.  All
+© Sat Mar 02 19:27:36 PST 2019 Salmon Arm Savings and Credit Union.  All
 rights reserved.
 
   

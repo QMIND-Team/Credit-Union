@@ -125,7 +125,7 @@ and supported as they achieve their financial goals.
 We Value
 
 Our Members.  They are the reason we exist and they are at the heart of what
-we do. For us, this means a commitment to continuously improving our members’
+we do. For us, this means a commitment to continuously improving our members
 experience by delivering relevant products, services and advice with honesty,
 fairness and respect.
 
@@ -218,7 +218,7 @@ Legal  |  Privacy  |  Security  |  Accessibility  |  Sitemap
 ©  Crosstown Civic Credit Union.  
 All rights reserved.
 
-×
+
 
 Jascha Boge
 
@@ -226,17 +226,17 @@ Chair
 
 Jascha is a P. Eng., and graduated from the University of Manitoba with a B.
 Sc. degree in Civil Engineering. He is a member of the Association of
-Professional Engineers and Geoscientists of Manitoba. Jascha’s principal
+Professional Engineers and Geoscientists of Manitoba. Jaschas principal
 occupation is Secretary-Treasurer of Langreen (2005) Ltd., a construction
 company that builds commercial and industrial projects in Manitoba and North
 West Ontario. He serves Crosstown Civic Credit Union as Chair of the Board of
 Directors and sits on the Executive and Governance, as well as the Loan
 Committee. Jascha also serves the community at large as a member of the
-Executive Committee of Rainbow Stage, Winnipeg’s well-known musical theatre
+Executive Committee of Rainbow Stage, Winnipegs well-known musical theatre
 company. Jascha and his wife, Hildi enjoy spending family time with their 6
 children and 14 grandchildren.
 
-×
+
 
 Henry Dyck
 
@@ -251,9 +251,9 @@ Henry has and continues to be involved in a variety of community organizations
 and/or projects that include Charleswood Mennonite Church, Westgate Mennonite
 Collegiate, Canadian Mennonite University, Mennonite Central Committee (MCC)
 and Community Housing developments. Major property development and building
-projects were undertaken during his leadership. Henry’s experience, knowledge
+projects were undertaken during his leadership. Henrys experience, knowledge
 and dedication in this area has been an asset to the Board and in the
-strategic planning and the establishment of the St. Anne’s Road, Pembina
+strategic planning and the establishment of the St. Annes Road, Pembina
 Highway, Portage Avenue (St. James) and the McPhillips Street branches.
 Crosstown Civic CU now has nine branches to better serve its members
 throughout the City.
@@ -266,7 +266,7 @@ future and stay strong. Henry and his wife Elsie have two married children and
 six grandchildren. Henry and his wife enjoy spending time with family, the
 Arts, sports, volunteering, travelling and the cottage.
 
-×
+
 
 Catherine Burns
 
@@ -288,7 +288,7 @@ diagnostic sites throughout Manitoba. She has worked for DSM for over seven
 years in a variety of leadership positions related to financial governance,
 organizational performance, change management and enterprise risk management.
 
-×
+
 
 Alan J. Janzen
 
@@ -306,7 +306,7 @@ the University of Manitoba. Alan enjoys spending quality time with his family,
 is active in his church community, and enjoys choral singing and volunteering
 with The MCC.
 
-×
+
 
 Ellie Krahn
 
@@ -319,7 +319,7 @@ served on the Executive, Loans, Nominating, and Building Committee's. She has
 completed the required Credit Union Director Achievement Program as well as
 many optional training modules.
 
-×
+
 
 Randy Schartner
 
@@ -330,7 +330,7 @@ Network and oversees its Winnipeg office and manages key accounts for the
 company, which has seen tremendous growth over the past six years. Randy is
 also a Real Estate and Development entrepreneur.
 
-×
+
 
 Don Enns
 
@@ -344,7 +344,7 @@ instructor for both Dalhousie University and the Justice Institute of British
 Columbia, facilitating fire service based administrative course delivery to
 students across Canada while utilizing an online platform.
 
-×
+
 
 John Zacharias
 
@@ -357,13 +357,13 @@ Mennonite Collegiate and treasurer of the North Kildonan Mennonite Church.
 John and his wife Helen have been members of Crosstown Civic Credit Union for
 more than forty-five years.
 
-×
+
 
 Ingrid Loewen
 
 Ingrid is a Chartered Accountant (1986) with a Bachelor of Commerce, Honours
 Degree (1983) from the University of Manitoba. For 25 years she worked for one
-of Manitoba’s largest crown corporations in leadership positions including the
+of Manitobas largest crown corporations in leadership positions including the
 Chief Audit Executive and Chief Financial and Strategy Officer with a wide
 range of responsibilities including governance, strategy, finance, internal
 audit, privacy, social responsibility, and communications. Ingrid has
@@ -371,7 +371,7 @@ extensive experience with board governance as an executive responsible for
 board processes and a board/committee member for various professional
 associations, not-for-profit organizations and Church Council.
 
-×
+
 
 Mona Forsen
 
@@ -387,14 +387,14 @@ accomplished by caring about and investing in CCCU employees, members and the
 local communities we serve. Mona and her husband Ward enjoy traveling and
 participating in many sporting activities.
 
-×
+
 
 Bernice McClintock
 
 Chief Operating Officer
 
 Bernice has worked within the credit union system in various leadership roles
-for over 20 years. She is passionate about optimizing our members’ experiences
+for over 20 years. She is passionate about optimizing our members experiences
 within our credit union. She holds her Certificate in Management (Honours) and
 a Professional Management designation, and has been recognized as a leader in
 her field. Bernice is actively involved in the community, and has served on
@@ -403,7 +403,7 @@ Manitoba Marathon. Bernice volunteers for Manitoba Cancer Care, Siloam Mission
 and Canadian Blood Services. Bernice and her husband Phil are actively
 involved in the many outdoor sporting events Winnipeg has to offer.
 
-×
+
 
 Brent Berzuk
 
@@ -418,21 +418,21 @@ also holds his Canadian Risk Management designation (CRM) awarded through the
 Global Risk Management Institute. Brent was born and raised in Winnipeg and
 enjoys raising his two boys with his wife Cindy.
 
-×
 
-Joël Bosc
+
+Jol Bosc
 
 Chief Financial Officer
 
-Joël joined Crosstown Civic Credit Union in 2007 as its Chief Financial
-Officer. Prior to joining the credit union, Joël held various senior
+Jol joined Crosstown Civic Credit Union in 2007 as its Chief Financial
+Officer. Prior to joining the credit union, Jol held various senior
 accounting and finance roles, including five years as director of finance at a
-Manitoba caisse populaire. Joël is a CPA,CA, having attained his Chartered
-Accountant designation while working with Ernst & Young’s Winnipeg office, and
+Manitoba caisse populaire. Jol is a CPA,CA, having attained his Chartered
+Accountant designation while working with Ernst & Youngs Winnipeg office, and
 also holds a Bachelor of Commerce (Honours) degree from the University of
 Manitoba.
 
-×
+
 
 Neil Enns
 
@@ -445,24 +445,24 @@ portfolio of over $700,000,000. Neil has a degree from the University of
 Manitoba, Faculty of Business with a major in Finance. He is married to his
 wife Patty and they have three wonderful daughters.
 
-×
+
 
 Rick Yallits
 
 Chief Information Officer
 
 Rick is the CIO of CCCU. He has been employed by CCCU since 2010 but has been
-involved with CCCU and their IT since the early 90’s, when there were only
+involved with CCCU and their IT since the early 90s, when there were only
 four branches. Prior to 2010, Rick spent the previous 17 years working for
-another company which provided IT services to many CU’s within the province,
+another company which provided IT services to many CUs within the province,
 of which CCCU was one. Rick has a diploma from RRCC in Business Administration
 as well as a Certificate from RRCC in Computer programming.
 
-×
+
 
 Deborah Harri
 
-Deborah’s is a corporate governance professional with over 20 years of
+Deborahs is a corporate governance professional with over 20 years of
 experience. She was formerly an executive and member of the leadership team of
 the Canadian Wheat Board. Deborah also served as Corporate Secretary of the
 CWB for 10 years, which involved advising and working closely with an elected
@@ -478,7 +478,7 @@ Canadian Lung Association.
 Deborah holds a Bachelor of Commerce (Honours) degree from the University of
 Manitoba and has taken numerous corporate governance courses.
 
-×
+
 
 Ken Braun
 

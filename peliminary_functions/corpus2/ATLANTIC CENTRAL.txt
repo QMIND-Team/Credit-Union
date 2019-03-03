@@ -13,7 +13,7 @@ Menu
 
    Home 
    About Us 
-   Atlantic Central – About Us 
+   Atlantic Central  About Us 
 
    Your Privacy and Security 
    The Credit Union Advantage 
@@ -21,7 +21,7 @@ Menu
    History 
    Credit Union Partner Links 
    Honest Money 
-   Atlantic Central – About Us 
+   Atlantic Central  About Us 
      Values, Mission and Vision 
      AC Board of Directors 
      Management Team 
@@ -30,7 +30,7 @@ Menu
    Careers 
    Contact Us 
 
-  Atlantic Central – About Us
+  Atlantic Central  About Us
 
 The role of Atlantic Central is to represent and support the credit unions of
 Nova Scotia, New Brunswick, Newfoundland and Labrador, and Prince Edward
@@ -43,7 +43,7 @@ including credit unions and their employees, our affiliates and their
 employees, and to each other. This professional service includes financial
 services and trade association and support services to Atlantic credit unions.
 
-Atlantic Central’s key financial role is management of the system’s liquidity
+Atlantic Centrals key financial role is management of the systems liquidity
 reserve requirements and provision of central and investment banking services
 to Atlantic credit unions. Additional trade association services provided to
 credit unions include:

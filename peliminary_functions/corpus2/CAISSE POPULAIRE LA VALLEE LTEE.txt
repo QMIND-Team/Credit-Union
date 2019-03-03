@@ -3,14 +3,14 @@ Go to the main content
 Main navigation
 
    Text size  A  A 
-   Changer de langue.  Français 
+   Changer de langue.  Franais 
    Locations 
    Contact us 
 
-  Online services – AccèsD, AccèsD Affaires, online brokerage, full service
+  Online services  AccsD, AccsD Affaires, online brokerage, full service
 brokerage.
 
-   AccèsD and AccèsD Affaires 
+   AccsD and AccsD Affaires 
    Online brokerage 
    Full service brokerage 
 
@@ -20,11 +20,11 @@ Log on  to Desjardins online services.
 
   Online services
 
-Log on to  AccèsD  or  AccèsD Affaires  .  Go  Log on to  AccèsD  or  AccèsD
+Log on to  AccsD  or  AccsD Affaires  .  Go  Log on to  AccsD  or  AccsD
 Affaires  .
 
-   Learn more about AccèsD 
-   Learn more about AccèsD Affaires 
+   Learn more about AccsD 
+   Learn more about AccsD Affaires 
 
   Online brokerage
 
@@ -73,7 +73,7 @@ End of dialog box.
      Accounts and services 
      Cards, loans and credit 
      Savings and investment 
-     Insurance  – Personal 
+     Insurance   Personal 
      Wealth management 
      Goals and life events 
      You are 
@@ -107,10 +107,10 @@ End of dialog box.
 
 Search  Search
 
-You are here:  Home  > Personal  > Caisse populaire Vallée Est limitée  >
+You are here:  Home  > Personal  > Caisse populaire Valle Est limite  >
 About the caisse
 
-  Caisse populaire Vallée Est limitée
+  Caisse populaire Valle Est limite
 
    Events, news and publications 
    Address and business hours 
@@ -125,7 +125,7 @@ About the caisse
   About the caisse
 
 A financial cooperative with deep roots in the community, Caisse populaire
-Vallée Est limitée has 7,523 members. Each caisse member is also a co-owner of
+Valle Est limite has 7,523 members. Each caisse member is also a co-owner of
 the caisse. Find out more about  caisse operations  .
 
   Site map
@@ -257,10 +257,10 @@ See all questions
   Top 5 FAQs
 
    Most asked questions:  How do I report a change of address? 
-   Most asked questions:  What do I do if I've forgotten my AccèsD password or want to change it? 
+   Most asked questions:  What do I do if I've forgotten my AccsD password or want to change it? 
    Most asked questions:  Why am I constantly receiving fraudulent emails? 
    Most asked questions:  For how long will funds be on hold in my account? 
-   Most asked questions:  How do I add a bill to my AccèsD Affaires bill file? 
+   Most asked questions:  How do I add a bill to my AccsD Affaires bill file? 
 
   Site help
 
@@ -273,7 +273,7 @@ See all questions
   FAQ
 
    How do I report a change of address? 
-   What do I do if I've forgotten my AccèsD password or want to change it? 
+   What do I do if I've forgotten my AccsD password or want to change it? 
    Why am I constantly receiving fraudulent emails? 
    See all questions 
 

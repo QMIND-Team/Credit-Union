@@ -28,23 +28,25 @@ for x in range(len(df)):
   f.ignore_images = True
   f.ignore_emphasis = True
   f.skip_internal_links = True
+
   try:
     r = requests.get(url)
     r.raise_for_status()
   except:
     time.sleep(5)
-  try:
-    r = requests.get(url)
-    r.raise_for_status()
-  except:
-    next
+    try:
+      r = requests.get(url)
+      r.raise_for_status()
+    except:
+      next
   
   soup = bs(r.content, "lxml").prettify()
 
   rendered_content = f.handle(str(soup))
   rendered_content = re.sub(r'{{.+?}}', '', rendered_content)
   rendered_content = rendered_content.replace("*", "").replace("#", "").replace("_", "").replace("\n\n\n\n", "\n").replace("\n\n\n", "\n\n")
-                             
+  rendered_content = ''.join(c for c in rendered_content if 0 < ord(c) < 200)                           
+                                             
   file_name = 'corpus2/' + df["CU"][x] + ".txt"
   f = open(file_name, "w", encoding="utf-8")
   f.write(rendered_content)

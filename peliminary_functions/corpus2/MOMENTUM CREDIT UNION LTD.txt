@@ -41,14 +41,14 @@
        Class A Shares 
        Deposit Insurance 
      Stages of Life 
-       I’m Going To School 
-       I’m Starting A New Job 
-       I’m Buying A New Car 
-       I’m Getting Married 
-       I’m Buying A House 
-       I’m Starting A Family 
-       I’m Going On A Trip 
-       I’m Planning My Retirement 
+       Im Going To School 
+       Im Starting A New Job 
+       Im Buying A New Car 
+       Im Getting Married 
+       Im Buying A House 
+       Im Starting A Family 
+       Im Going On A Trip 
+       Im Planning My Retirement 
 
    Business 
 
@@ -56,7 +56,7 @@
        Business Chequing Account 
        Business Savings Account 
        US Savings Account 
-       Club /​ Charity Chequing 
+       Club / Charity Chequing 
      Loans & Mortgages 
        Commercial Loan 
        Commercial Line of Credit 
@@ -66,7 +66,7 @@
      Solution Centre 
      In-Branch 
      My MCU Mobile Banking App 
-     Online/​Mobile Banking 
+     Online/Mobile Banking 
      Telephone Banking 
      ®Member Card 
      Find an ATM 
@@ -106,10 +106,10 @@ also an Owner. Our members elect our Board of Directors and share in the
 profits of the credit union through convenient and affordable products and
 services, a high quality banking experience and in the form of dividends and
 rebates that may be paid from time to time. Being a co-operative means we put
-our Members interests first and we recognize that we wouldn’t be here without
+our Members interests first and we recognize that we wouldnt be here without
 them so we value their business and every relationship that we form. Our
 members are our shareholders so there is no conflict between our customers and
-our owners…they are one and the same.
+our ownersthey are one and the same.
 
 We consist of a close-knit team of less than 40 employees operating out of
 four branches and our Solution Centre. We may be small, but we see that as an
@@ -118,7 +118,7 @@ one-on-one, but it means we make our decisions locally. We understand that
 everyone has their own story and unique situation. Our Members are more than
 just a credit score which is why we take the time to get to know them in order
 to provide the best solutions to meet their financial goals. We know that our
-Members build their own momentum each and every day and we’re just here to
+Members build their own momentum each and every day and were just here to
 help.
 
 We serve our Members through multiple convenient channels including online and
@@ -143,10 +143,10 @@ service that we can possibly provide and that our Members deserve.
    We believe our people have the ability to do great things. 
    We believe that we will never lose sight of our co-operative principles. 
    We believe in accountability to our members, our colleagues, and ourselves. 
-   We believe in the strength of diversity—diversity of opinion, approach and perspectives. 
+   We believe in the strength of diversitydiversity of opinion, approach and perspectives. 
    We believe our vision for the future should be top of mind with every interaction. 
    We believe that innovation is the best tool to be ahead in the future. 
-   We believe that every member should feel like they belong to something bigger, membership is only the beginning… 
+   We believe that every member should feel like they belong to something bigger, membership is only the beginning 
 
   About Us
 
@@ -164,7 +164,7 @@ and the value of your hard-earned money.
 
 Apply Now
 
-  We’re social
+  Were social
 
    Instagram 
    Linkedin 
@@ -180,7 +180,7 @@ events.
 
    Solution Centre 
    My MCU Mobile Banking App 
-   Online/​Mobile Banking 
+   Online/Mobile Banking 
    Telephone Banking 
    ®Member Card 
    Find an ATM 
