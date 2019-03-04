@@ -37,7 +37,7 @@ app.layout = html.Div(children=[
                    style={'color' : colors['text'], 
                           'fontSize' : 15, 'textAlign' : 'center'}),
             # Author 
-            html.P('Developed by: QMIND Credit Union Analysis Team', 
+            html.P('QMIND Credit Union Team', 
                    style={'color' : colors['text'], 'textAlign' : 'center',
                           'marginBottom' : 0}),
             # Line break
@@ -47,31 +47,27 @@ app.layout = html.Div(children=[
             html.Div([
                     # Label
                     html.Div([
-                            html.Label('Enter a Credit Union Routing Number:', 
+                            html.Label('Enter a Credit Union Identification Number', 
                                        style = {'color' : colors['text']}),
                                        
                             dcc.Input(id = 'input', 
-                                      value = 80900140, 
+                                      value = 1, 
                                       type='number'),
             
                             ], className='six columns'),
                      
                     # Checkboxes
                     html.Div([
-                            html.Label('Select Categories that you wish to consider:',
+                            html.Label('Similarity Metric:',
                                        style = {'color' : colors['text']}),
                             dcc.Checklist(
                                     options=[
-                                            {'label': 'Financials', 
-                                             'value': 'fin'},
-                                            {'label': u'Demographics', 
-                                             'value': 'demo'},
-                                            {'label': 'Location', 
-                                             'value': 'loc'},
-                                            {'label': 'Size',
-                                             'value': 'size'}
+                                            {'label': 'Kullback Lieber Divergence', 
+                                             'value': 'kldiv'},
+                                            {'label': 'Cosine Similarity', 
+                                             'value': 'cossim'}
                                             ],
-                                    values=['loc', 'size'],
+                                    values=['kldiv', 'cossim'],
                                     style = {'color' : colors['text']}),
                             ], className='six columns'),
                     ], className = 'row'
@@ -103,22 +99,37 @@ app.css.append_css({
 # Figure update based on callback
 def update_figure(input_value):
     # New data frame ordering
-    filtered_df = df.loc[(df['RN'] - input_value).abs().argsort()]  
+    df = pd.DataFrame()
+    # Getting all of the most similar CUs by KLD
+    ID = [KLD[input_value][i][1] for i in range(len(KLD[input_value]))]    
+    
+    # Collecting the cosine similarity and the KLD similarity
+    cos_sim = [COS[input_value][i] for i in range(len(COS[input_value]))]
+    kld_sim = [KLD[input_value][i] for i in range(len(KLD[input_value]))]
+    
+    # ordering the cosine similarity list to have the same order as KLD
+    order = {key: i for i, key in enumerate(ID)}
+    cos_sim = sorted(cos_sim, key = lambda d: order[d[1]])
+    
+    #extracting just the values from the similarity metric
+    cos_sim_values = ['{0:.2f}'.format(cos_sim[i][0]) for i in range(len(cos_sim))]
+    kld_sim_values = ['{0:.2f}'.format(kld_sim[i][0]) for i in range(len(kld_sim))]
+
+    # filling the data frame to use as the table on dash
+    df['Credit Union ID'] = ID
+    df['Kullback Lieber Divergence'] = kld_sim_values
+    df['Cosine Similarity'] = cos_sim_values
     
     # Build table data
     trace = go.Table(
-            header = dict(values = list(['Routing Number',
-                                    'Electronic Paper',
-                                    'Postal Address',
-                                    'Postal Code',
-                                    'Credit Union Name']),
+            header = dict(values = list(['Credit Union ID',
+                                         'Kullback Lieber Divergence',
+                                         'Cosine Similarity']),
                           align = ['left']*5),
             
-            cells = dict(values = [filtered_df.RN[:10], 
-                                   filtered_df.EP[:10], 
-                                   filtered_df.PA[:10], 
-                                   filtered_df.PC[:10], 
-                                   filtered_df.CU[:10]],
+            cells = dict(values = [df['Credit Union ID'], 
+                                   df['Kullback Lieber Divergence'], 
+                                   df['Cosine Similarity'],],
                          align = ['left']*5)
     )
     

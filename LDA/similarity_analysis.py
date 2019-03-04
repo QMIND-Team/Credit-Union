@@ -92,3 +92,8 @@ for i in range(len(KLDiv)):
     #temp = temp[:NUM]
     
     KLD_top.append(temp)
+    
+    
+# KLD save
+pickle.dump(KLD_top,open('KLD_similarity.pkl','wb'))
+pickle.dump(top,open('Cosine_similarity.pkl','wb'))
