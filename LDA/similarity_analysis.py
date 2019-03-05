@@ -95,5 +95,9 @@ for i in range(len(KLDiv)):
     
     
 # KLD save
-pickle.dump(KLD_top,open('KLD_similarity.pkl','wb'))
-pickle.dump(top,open('Cosine_similarity.pkl','wb'))
+pickle.dump(KLD_top,open('Dash/KLD_similarity.pkl','wb'))
+pickle.dump(top,open('Dash/Cosine_similarity.pkl','wb'))
+pickle.dump(corpus,open('Dash/corpus.pkl','wb'))
+pickle.dump(dictionary,open('Dash/dictionary.pkl','wb'))
+
+

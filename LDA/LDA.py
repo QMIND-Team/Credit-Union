@@ -34,7 +34,7 @@ for path in article_paths:
         except:
             next
 
-TOPICS = 4
+TOPICS = 3
 PASSES = 15
 ITERATIONS = 50
 
