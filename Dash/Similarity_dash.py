@@ -70,9 +70,10 @@ app.layout = html.Div(children=[
                                     values=['kldiv', 'cossim'],
                                     style = {'color' : colors['text']}),
                             ], className='six columns'),
+                    
                     ], className = 'row'
             ),
-            
+        
             # Description
             html.Label('''The following credit unions most closely 
                     match your criterion:''',
