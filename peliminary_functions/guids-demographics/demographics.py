@@ -39,9 +39,8 @@ gnr_sf_list = []
 gnr_lf_list = []
 data_quality_flag_list = []
 
-# adding stuff to good ol lists
-# Currently getting infor for BC(current), AB, SK, MA
-with open('../../Excel data/guids/guids-bc.csv') as csvfile:
+
+with open('../../Excel data/guids/guids-manitoba.csv') as csvfile:
     readCSV = csv.reader(csvfile, delimiter=',')
     for row in readCSV:
         dguid_list.append(row[0])
@@ -56,9 +55,10 @@ subdiv_type_list = subdiv_type_list[1:]
 
 #writing columns and column contents to a dataframe
 ddf_columns = ['GUID', 'PROVID', 'PROVNAME', 'SDNAME', 'GEOTYPE', 'TEXTTHEME', 'TEXTID',
-                           'HIER', 'INDENT', 'TEXTNAME', 'TEXTDATA', 'MDATA', 'FDATA'] # Label the columns
+               'HIER', 'INDENT', 'TEXTNAME', 'TEXTDATA', 'MDATA', 'FDATA'] # Label the columns
 demographics_df = pd.DataFrame(columns= ddf_columns)
 
+#append demographics information to dataframe
 for (a, b, c, d) in zip(dguid_list, prov_name, subdiv_name, subdiv_type_list):
     print(a, b, c, d)
     dguid = a
@@ -73,5 +73,7 @@ for (a, b, c, d) in zip(dguid_list, prov_name, subdiv_name, subdiv_type_list):
                                        data['DATA'][i][15],
                                        data['DATA'][i][17]]
             demographics_df.index = demographics_df.index + 1
-demographics_df.to_pickle("../../Pickled Data/demographics/income-data-bc.pkl")
-print("done, file is pickled.")
+
+demographics_df.to_pickle("../../Pickled Data/demographics/income-data-manitoba.pkl")
+unpickled_df = pd.read_pickle("../../Pickled Data/demographics/income-data-manitoba.pkl")
+unpickled_df.to_csv("../../Excel data/demographics/income/income-data-manitoba.csv", index=False)
