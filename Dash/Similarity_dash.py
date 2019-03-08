@@ -6,8 +6,8 @@ import plotly.plotly as py
 import plotly.graph_objs as go
 import pickle
 
-KLD = pickle.load(open('KLD_similarity.pkl','rb'))
-COS = pickle.load(open('Cosine_similarity.pkl','rb'))
+KLD = pickle.load(open('Dash/KLD_similarity.pkl','rb'))
+COS = pickle.load(open('Dash/Cosine_similarity.pkl','rb'))
 # Import dataframe data
 df = pd.read_pickle('CU_locations.p')
 
