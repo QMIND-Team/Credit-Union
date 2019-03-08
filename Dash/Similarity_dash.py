@@ -8,6 +8,7 @@ import pickle
 
 KLD = pickle.load(open('Dash/KLD_similarity.pkl','rb'))
 COS = pickle.load(open('Dash/Cosine_similarity.pkl','rb'))
+indexed_names = pd.read_pickle('Dash/indexed_names.p')
 # Import dataframe data
 df = pd.read_pickle('CU_locations.p')
 
@@ -108,29 +109,44 @@ def update_figure(input_value):
     cos_sim = [COS[input_value][i] for i in range(len(COS[input_value]))]
     kld_sim = [KLD[input_value][i] for i in range(len(KLD[input_value]))]
     
+    
+    
+    
     # ordering the cosine similarity list to have the same order as KLD
     order = {key: i for i, key in enumerate(ID)}
     cos_sim = sorted(cos_sim, key = lambda d: order[d[1]])
     
+    names = []
+    postal = []
+    for value in ID:
+            names.append(indexed_names.name[value])
+            postal.append(indexed_names.postal_code[value])
+            
     #extracting just the values from the similarity metric
     cos_sim_values = ['{0:.2f}'.format(cos_sim[i][0]) for i in range(len(cos_sim))]
     kld_sim_values = ['{0:.2f}'.format(kld_sim[i][0]) for i in range(len(kld_sim))]
 
     # filling the data frame to use as the table on dash
     df['Credit Union ID'] = ID
+    df['Name'] = names
     df['Kullback Lieber Divergence'] = kld_sim_values
     df['Cosine Similarity'] = cos_sim_values
+    df['postal_code'] = postal
     
     # Build table data
     trace = go.Table(
             header = dict(values = list(['Credit Union ID',
+                                         'Name',
                                          'Kullback Lieber Divergence',
-                                         'Cosine Similarity']),
+                                         'Cosine Similarity',
+                                         'Postal Code']),
                           align = ['left']*5),
             
             cells = dict(values = [df['Credit Union ID'], 
-                                   df['Kullback Lieber Divergence'], 
-                                   df['Cosine Similarity'],],
+                                   df['Name'],
+                                   df['Kullback Lieber Divergence'],
+                                   df['Cosine Similarity'],
+                                   df['postal_code']],
                          align = ['left']*5)
     )
     
