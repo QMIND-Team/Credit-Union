@@ -15,10 +15,11 @@ import urllib.parse
 import json
 import pandas as pd
 import csv
+import codecs
 
 # Outputs to text file
 def text_output(str):
-    text_file = open("out-demographics.txt", "w")
+    text_file = codecs.open("out-demographics.txt", "w", "utf-8")
     text_file.write(str)
     text_file.close()
 
@@ -40,31 +41,33 @@ gnr_lf_list = []
 data_quality_flag_list = []
 
 
-with open('../../Excel data/guids/guids-manitoba.csv') as csvfile:
+with open("../../Excel data/guids/subdivision-guids-trimmed.csv", encoding='utf-8-sig') as csvfile:
     readCSV = csv.reader(csvfile, delimiter=',')
     for row in readCSV:
         dguid_list.append(row[0])
         prov_name.append(row[1])
         subdiv_name.append((row[2]))
         subdiv_type_list.append((row[3]))
+
 dguid_list = dguid_list[1:]
 prov_name = prov_name[1:]
 subdiv_name = subdiv_name[1:]
 subdiv_type_list = subdiv_type_list[1:]
 
-
 #writing columns and column contents to a dataframe
-ddf_columns = ['GUID', 'PROVID', 'PROVNAME', 'SDNAME', 'GEOTYPE', 'TEXTTHEME', 'TEXTID',
+df_columns = ['GUID', 'PROVID', 'PROVNAME', 'SDNAME', 'GEOTYPE', 'TEXTTHEME', 'TEXTID',
                'HIER', 'INDENT', 'TEXTNAME', 'TEXTDATA', 'MDATA', 'FDATA'] # Label the columns
-demographics_df = pd.DataFrame(columns= ddf_columns)
+demographics_df = pd.DataFrame(columns= df_columns)
 
+#Big ass income data stuff
 #append demographics information to dataframe
 for (a, b, c, d) in zip(dguid_list, prov_name, subdiv_name, subdiv_type_list):
     print(a, b, c, d)
     dguid = a
+    # will change the topic for different topics that may be important!
     url = 'https://www12.statcan.gc.ca/rest/census-recensement/CPR2016.json?lang=E&dguid=' + dguid + '&topic=7&notes=0' # receives income data from subdivisions in a province
     text_output(requestResponse(url))
-    with open('out-demographics.txt') as jsonfile:
+    with open('out-demographics.txt', encoding='utf-8-sig') as jsonfile:
         data = json.load(jsonfile)
         for i in range(len(data['DATA'])):
             demographics_df.loc[-1] = [a, data['DATA'][i][0], b, c,
@@ -74,6 +77,8 @@ for (a, b, c, d) in zip(dguid_list, prov_name, subdiv_name, subdiv_type_list):
                                        data['DATA'][i][17]]
             demographics_df.index = demographics_df.index + 1
 
-demographics_df.to_pickle("../../Pickled Data/demographics/income-data-manitoba.pkl")
-unpickled_df = pd.read_pickle("../../Pickled Data/demographics/income-data-manitoba.pkl")
-unpickled_df.to_csv("../../Excel data/demographics/income/income-data-manitoba.csv", index=False)
+demographics_df.to_pickle("../../Pickled Data/demographics/income/income-data.pkl",)
+unpickled_df = pd.read_pickle("../../Pickled Data/demographics/income/income-data.pkl")
+unpickled_df.to_csv("../../Excel data/demographics/income/income-data.csv", index=False, encoding="utf-8-sig")
+print("Done writing income data to a pickle + csv :)")
+
